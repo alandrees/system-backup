@@ -161,4 +161,4 @@ if __name__ == "__main__":
 
     app = SystemBackup(args)
 
-    app.main(args.host)
+    app.main(args['host'])
