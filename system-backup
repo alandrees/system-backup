@@ -119,6 +119,8 @@ class SystemBackup:
         if not host in self.host_config:
             raise RuntimeError("Host not found in host configuration.")
 
+        config = self.host_config[host]
+
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="Execute or test a System Backup")
