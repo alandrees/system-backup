@@ -145,6 +145,29 @@ class SystemBackup:
 
         return rsh_cmd
 
+    def _build_base_rsync_options(self, rsh_cmd, host_options):
+        """
+        Build a list of arguments to pass to the rsync command
+
+        @param self (object) object reference
+        @param rsh_cmd (string) --rsh parameter to use
+        @param host_options (list) list of options from the host block
+
+        @returns (list) List of arguments to pass to rsync
+        """
+
+        shell_command = '--rsh="' + rsh_cmd + '"'
+
+        options = [shell_command]
+
+        options.extend(host_options)
+
+        options.extend(self.app_config['default_arguments'])
+
+        if self.dry_run:
+            options.append('--dry-run')
+
+        return options
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="Execute or test a System Backup")
