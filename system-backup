@@ -33,3 +33,14 @@ class SystemBackup:
 
         pass
 
+    def main(self, host):
+        """
+        Application Entry point
+
+        @param self (object) object reference
+        @param host (string) identifier of the host to run
+
+        @returns None
+        """
+        pass
+
