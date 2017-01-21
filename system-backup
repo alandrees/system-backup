@@ -48,7 +48,7 @@ class SystemBackup:
         if not self._rsync_host_test():
             raise RuntimeError("specified rsync binary is invalid")
 
-    def _rsync_host_test(self):
+    def _rsync_bin_test(self):
         """
         Test to ensure that the host does have the rsync binary available
 
