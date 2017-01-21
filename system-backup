@@ -53,3 +53,14 @@ class SystemBackup:
         @returns (boolean) True if it exists, false otherwise
         """
         pass
+
+    def _load_application_config(self, path):
+        """
+        Load the backup application configuration from the specified file
+
+        @param self (object) object reference
+        @param path (string) path to the application configuration file
+
+        @returns (list) list of application configuration directives
+        """
+        pass
