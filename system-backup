@@ -143,7 +143,7 @@ class SystemBackup:
 
         rsh_cmd = self.app_config['shell_command']['command'] + ' ' + ' '.join(ssh_args)
 
-        return '"' + rsh_cmd + '"'
+        return rsh_cmd
 
 if __name__ == "__main__":
 
