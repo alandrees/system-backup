@@ -121,6 +121,10 @@ class SystemBackup:
 
         cfg = self.host_config[host]
 
+        cfg_ssh_args = cfg.ssh_options
+
+        cfg_ssh_args.append('-p ' + str(cfg['port']))
+
     def _build_ssh_command(self, host_args):
         """
         Combines the global ssh commands from the app config with the
