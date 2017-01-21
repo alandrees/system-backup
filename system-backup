@@ -44,3 +44,12 @@ class SystemBackup:
         """
         pass
 
+    def _rsync_host_test(self):
+        """
+        Test to ensure that the host does have the rsync binary available
+
+        @param self (object) object reference
+
+        @returns (boolean) True if it exists, false otherwise
+        """
+        pass
