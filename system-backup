@@ -168,6 +168,21 @@ class SystemBackup:
             options.append('--dry-run')
 
         return options
+
+
+    def _build_exclude_list(self, paths):
+        """
+        Returns a list of exception command line arguments to pass to the rsync command
+
+        @param self (object) object reference
+        @param paths (list) list of paths to build exceptions for
+        """
+
+        paths.extend(self.app_config['global_ignores'])
+
+        excludes = ['--exclude="' + e + '"' for e in paths]
+
+        return excludes
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="Execute or test a System Backup")
