@@ -115,7 +115,6 @@ class SystemBackup:
 
         @returns (list) list of host configuration dictionaries
         """
-        pass
 
 
 if __name__ == "__main__":
