@@ -116,6 +116,8 @@ class SystemBackup:
         @returns (list) list of host configuration dictionaries
         """
 
+        if not host in self.host_config:
+            raise RuntimeError("Host not found in host configuration.")
 
 if __name__ == "__main__":
 
