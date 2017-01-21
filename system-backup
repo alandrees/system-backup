@@ -64,3 +64,14 @@ class SystemBackup:
         @returns (list) list of application configuration directives
         """
         pass
+
+    def _load_host_config(self, path):
+        """
+        Load the backup host directives from a yaml file
+
+        @param self (object) object reference
+        @param path (string) path to the application configuration file
+
+        @returns (list) list of host backup directive configurations
+        """
+        pass
