@@ -78,7 +78,13 @@ class SystemBackup:
 
         @returns (list) list of application configuration directives
         """
-        pass
+
+        config = {}
+
+        with open(path, 'r') as config:
+            config = yaml.load(config)
+
+        return config
 
     def _load_host_config(self, path):
         """
