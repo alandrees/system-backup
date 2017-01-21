@@ -1,1 +1,10 @@
-#! /usr/bin/env python3
+#!/usr/bin/env python3
+
+"""
+Copyright 2017 Pirate Hour Productions
+
+Author: Alan Drees
+
+Purpose: Application class implementation for the system-backup command
+
+"""
