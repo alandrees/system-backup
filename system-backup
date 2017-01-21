@@ -55,7 +55,19 @@ class SystemBackup:
 
         @returns (boolean) True if it exists, false otherwise
         """
-        pass
+
+        rsync_location = self.app_config['rsync_binary']
+
+        if os.path.isfile(rsync_location):
+            stat = os.stat(rsync_location)
+
+            if os.access(rsync_location, os.X_OK):
+                return True
+            else:
+                return False
+
+        else:
+            return False
 
     def _load_application_config(self, path):
         """
