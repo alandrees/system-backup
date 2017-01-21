@@ -156,7 +156,7 @@ if __name__ == "__main__":
     parser.add_argument('host',
                         help="Host to execute backup directives for")
 
-    args = parser.parse_args()
+    args = vars(parser.parse_args())
 
     app = SystemBackup(args)
 
