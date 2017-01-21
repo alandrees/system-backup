@@ -86,3 +86,52 @@ class SystemBackup:
         @returns (list) list of host configuration dictionaries
         """
         pass
+
+
+if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser(description="Execute or test a System Backup")
+
+    parser.add_argument('--dry-run',
+                        dest="dry_run",
+                        action="store_true",
+                        help="Run the rsync commands in dry-run mode")
+
+    parser.add_argument('--host-config',
+                        dest="host_config",
+                        default="./host_config.yml",
+                        help="Provide a path to an alternate host configuration file")
+
+    parser.add_argument('--app-config',
+                        dest="app_config",
+                        default="./app_config.yml",
+                        help="Provide a path to an alternate app configuration file.")
+
+    parser.add_argument('--generate-host-config',
+                        dest="generate_host_config",
+                        action="store_true",
+                        help="Generate a standard host configuration. Unimplemented.")
+
+    parser.add_argument('--generate-app-config',
+                        dest="generate_app_config",
+                        action="store_true",
+                        help="Generate a default application configuration. Unimplemented.")
+
+    parser.add_argument('--test-app-conf',
+                        dest="test_app_conf",
+                        action="store_true",
+                        help="Test application configuration. Unimplemented.")
+
+    parser.add_argument('--test-host-conf',
+                        dest="test_host_syntax",
+                        action="store_true",
+                        help="Test host configuration. Unimplemented.")
+
+    parser.add_argument('host',
+                        help="Host to execute backup directives for")
+
+    args = parser.parse_args()
+
+    app = SystemBackup(args)
+
+    app.main(args.host)
