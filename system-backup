@@ -51,6 +51,7 @@ class SystemBackup:
     def _rsync_bin_test(self):
         """
         Test to ensure that the host does have the rsync binary available
+        and it is executable
 
         @param self (object) object reference
 
