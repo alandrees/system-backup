@@ -119,7 +119,7 @@ class SystemBackup:
         if not host in self.host_config:
             raise RuntimeError("Host not found in host configuration.")
 
-        config = self.host_config[host]
+        cfg = self.host_config[host]
 
     def _build_ssh_command(self, host_args):
         """
