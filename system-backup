@@ -75,3 +75,14 @@ class SystemBackup:
         @returns (list) list of host backup directive configurations
         """
         pass
+
+    def _run_host_backup(self, host):
+        """
+        Run the actual rsync backup process
+
+        @param self (object) object reference
+        @param host (string) identifier of the host to run
+
+        @returns (list) list of host configuration dictionaries
+        """
+        pass
