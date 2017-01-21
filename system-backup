@@ -95,7 +95,12 @@ class SystemBackup:
 
         @returns (list) list of host backup directive configurations
         """
-        pass
+        config = {}
+
+        with open(path, 'r') as config:
+            config = yaml.load(config)
+
+        return config
 
     def _run_host_backup(self, host):
         """
