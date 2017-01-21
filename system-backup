@@ -16,3 +16,20 @@ import subprocess
 
 class SystemBackup:
 
+    def __init__(self, args):
+        """
+        SystemBackup application class constructor
+
+        @param self (object) object reference
+        @param args (Argparse.Namespace) application arguments
+
+        @returns None
+        """
+        app_config = args.app_config
+        host_config = args.host_config
+
+        self.app_config  = self._load_application_config(app_config)
+        self.host_config = self._load_host_config(host_config)
+
+        pass
+
