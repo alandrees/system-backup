@@ -12,6 +12,7 @@ Purpose: Application class implementation for the system-backup command
 import sys
 import argparse
 import yaml
+import os
 import subprocess
 
 class SystemBackup:
