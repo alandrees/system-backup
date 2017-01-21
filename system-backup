@@ -132,7 +132,7 @@ class SystemBackup:
         Combines the global ssh commands from the app config with the
         host ssh commands in the host config
 
-        @param app_args (list) list of application arguments
+        @param self (object) object reference
         @param host_args (list) list of host arguments
 
         @returns (list) a combined list of both argument lists
