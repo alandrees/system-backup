@@ -121,7 +121,7 @@ class SystemBackup:
 
         cfg = self.host_config[host]
 
-        cfg_ssh_args = cfg.ssh_options
+        cfg_ssh_args = cfg['ssh_options']
 
         cfg_ssh_args.append('-p ' + str(cfg['port']))
 
