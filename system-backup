@@ -234,6 +234,9 @@ class SystemBackup:
 
         command = tuple(options)
 
+        if self.debug_command:
+            print(command)
+            return True
 
 if __name__ == "__main__":
 
