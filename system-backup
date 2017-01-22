@@ -150,6 +150,9 @@ class SystemBackup:
                                                      remote_path,
                                                      local_path)
 
+            if not cmd_return:
+                raise RuntimeError("rsync command returned non-zero")
+
     def _build_ssh_command(self, host_args):
         """
         Combines the global ssh commands from the app config with the
