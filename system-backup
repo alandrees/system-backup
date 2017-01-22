@@ -223,7 +223,17 @@ class SystemBackup:
         @returns (boolean) True on success False otherwise
         """
 
-        pass
+        binary = self.app_config['rsync_binary']
+
+        remote_path = host + ":" + remote_path
+
+        options.append(remote_path)
+        options.append(local_host_path)
+
+        options.insert(0, binary)
+
+        command = tuple(options)
+
 
 if __name__ == "__main__":
 
