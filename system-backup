@@ -154,13 +154,13 @@ class SystemBackup:
             if not cmd_return:
                 raise RuntimeError("rsync command returned non-zero")
 
-    def _build_ssh_command(self, host_args):
+    def _build_ssh_command(self, args):
         """
         Combines the global ssh commands from the app config with the
         host ssh commands in the host config
 
         @param self (object) object reference
-        @param host_args (list) list of host arguments
+        @param host_args (list) list of arguments
 
         @returns (list) a combined list of both argument lists
         """
