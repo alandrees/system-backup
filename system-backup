@@ -59,6 +59,14 @@ class SystemBackup:
         @returns None
         """
 
+        if self.list_hosts:
+            hosts = list(self.host_config.keys())
+            hosts.sort()
+
+            for host in hosts:
+                print(host)
+            return
+
         if not self._rsync_bin_test():
             raise RuntimeError("specified rsync binary is invalid")
 
