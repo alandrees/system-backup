@@ -48,8 +48,6 @@ class SystemBackup:
         self.app_config  = self._load_application_config(app_config)
         self.host_config = self._load_host_config(host_config)
 
-        pass
-
     def main(self, host):
         """
         Application Entry point
