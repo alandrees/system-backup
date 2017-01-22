@@ -321,6 +321,11 @@ if __name__ == "__main__":
                         action="store_true",
                         help="Output the rsync command and exit.")
 
+    parser.add_argument('--list-hosts',
+                        dest="list_hosts",
+                        action="store_true",
+                        help="List the hosts defined in the host config file.")
+
     parser.add_argument('--generate-host-config',
                         dest="generate_host_config",
                         action="store_true",
