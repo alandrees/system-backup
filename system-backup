@@ -284,7 +284,17 @@ class SystemBackup:
         if self.debug_command:
             print(command)
 
-        return subprocess.check_output(command)
+        plist = subprocess.check_output(command).decode('utf-8')
+
+        plist = [re.sub('\s.*install',
+                       '',
+                        line)\
+                 for line in plist.split('\n')\
+                 if "install" in line ]
+
+        plist = "\n".join(plist)
+
+        return plist
 
 if __name__ == "__main__":
 
