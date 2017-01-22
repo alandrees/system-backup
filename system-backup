@@ -178,7 +178,7 @@ class SystemBackup:
         @returns (list) List of arguments to pass to rsync
         """
 
-        shell_command = '--rsh="' + rsh_cmd + '"'
+        shell_command = '--rsh=' + rsh_cmd
 
         options = [shell_command]
 
