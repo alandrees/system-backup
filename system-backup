@@ -171,6 +171,9 @@ class SystemBackup:
 
         packagelist_contents = self._get_packagelist(cfg['host'], cfg_ssh_args)
 
+        with open(local_path + '/packagelist', 'w') as f:
+            f.write(packagelist_contents + '\n')
+
     def _build_ssh_command(self, args):
         """
         Combines the global ssh commands from the app config with the
