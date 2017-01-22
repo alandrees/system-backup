@@ -130,6 +130,8 @@ class SystemBackup:
         rsync_arg_list = self._build_base_rsync_options(rsh_cmd,
                                                         cfg['rsync_options'])
 
+        paths = cfg['paths']
+
     def _build_ssh_command(self, host_args):
         """
         Combines the global ssh commands from the app config with the
