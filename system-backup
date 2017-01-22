@@ -132,6 +132,7 @@ class SystemBackup:
 
         paths = cfg['paths']
 
+        paths.extend(self.app_config['common_paths'])
     def _build_ssh_command(self, host_args):
         """
         Combines the global ssh commands from the app config with the
