@@ -238,6 +238,11 @@ if __name__ == "__main__":
                         default="./app_config.yml",
                         help="Provide a path to an alternate app configuration file.")
 
+    parser.add_argument('--dbg-cmd',
+                        dest="debug_command",
+                        action="store_true",
+                        help="Output the rsync command and exit before executing rsync.")
+
     parser.add_argument('--generate-host-config',
                         dest="generate_host_config",
                         action="store_true",
