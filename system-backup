@@ -311,17 +311,17 @@ if __name__ == "__main__":
     parser.add_argument('--host-config',
                         dest="host_config",
                         default="./host_config.yml",
-                        help="Provide a path to an alternate host configuration file")
+                        help="Path to an alternate host config.")
 
     parser.add_argument('--app-config',
                         dest="app_config",
                         default="./app_config.yml",
-                        help="Provide a path to an alternate app configuration file.")
+                        help="Path to an alternate app config.")
 
     parser.add_argument('--dbg-cmd',
                         dest="debug_command",
                         action="store_true",
-                        help="Output the rsync command and exit before executing rsync.")
+                        help="Output the rsync command and exit.")
 
     parser.add_argument('--generate-host-config',
                         dest="generate_host_config",
@@ -331,7 +331,7 @@ if __name__ == "__main__":
     parser.add_argument('--generate-app-config',
                         dest="generate_app_config",
                         action="store_true",
-                        help="Generate a default application configuration. Unimplemented.")
+                        help="Generate a default app configuration. Unimplemented.")
 
     parser.add_argument('--test-app-conf',
                         dest="test_app_conf",
