@@ -187,14 +187,14 @@ class SystemBackup:
 
         return excludes
 
-    def _execute_rsync_command(self, options, remote_path, local_base_path):
+    def _execute_rsync_command(self, options, remote_path, local_host_path):
         """
         Executes the rsync command with the given options on the remote and local paths
 
         @param self (object) object reference
         @param options (list) compiled list of command line options to use
         @param remote_path (string) the remote path which should be backed up
-        @param local_base_path (string) the local base path which the remote should be rsync'd to
+        @param local_host_path (string) the local base path which the remote should be rsync'd to
 
         @returns (boolean) True on success False otherwise
         """
