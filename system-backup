@@ -44,6 +44,7 @@ class SystemBackup:
         host_config = args['host_config']
         self.dry_run = args['dry_run']
         self.debug_command = args['debug_command']
+        self.list_hosts = args['list_hosts']
 
         self.app_config  = self._load_application_config(app_config)
         self.host_config = self._load_host_config(host_config)
