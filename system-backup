@@ -243,6 +243,31 @@ class SystemBackup:
 
         return True
 
+    def _get_packagelist(self, host, ssh_command):
+        """
+        Get the list of installed packages on the host system, and put that in a file
+
+        @param self (object) object reference
+        @param host (string) host to get the packagelist from
+        @param ssh_command (list) list of ssh command parameters
+
+        @returns (string) containing the contents of the packagelist
+        """
+
+        command = ssh_command
+
+        command.insert(0, self.app_config['shell_command']['command'])
+
+        command.append(host)
+
+        command.append('dpkg')
+
+        command.append('--get-selections')
+
+        if self.debug_command:
+            print(command)
+
+        return subprocess.check_output(command)
 
 if __name__ == "__main__":
 
