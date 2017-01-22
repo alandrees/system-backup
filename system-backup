@@ -126,6 +126,8 @@ class SystemBackup:
 
         cfg_ssh_args.append('-p ' + str(cfg['port']))
 
+        cfg_ssh_args.extend(self.app_config['shell_command']['args'])
+
         rsh_cmd = self._build_ssh_command(cfg_ssh_args)
 
         rsync_arg_list = self._build_base_rsync_options(rsh_cmd,
