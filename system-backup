@@ -164,11 +164,8 @@ class SystemBackup:
 
         @returns (list) a combined list of both argument lists
         """
-        ssh_args = self.app_config['shell_command']['args']
 
-        ssh_args.extend(host_args)
-
-        rsh_cmd = self.app_config['shell_command']['command'] + ' ' + ' '.join(ssh_args)
+        rsh_cmd = self.app_config['shell_command']['command'] + ' ' + ' '.join(args)
 
         return rsh_cmd
 
