@@ -206,7 +206,7 @@ class SystemBackup:
 
         paths.extend(self.app_config['global_ignores'])
 
-        excludes = ['--exclude="' + e + '"' for e in paths]
+        excludes = ['--exclude=' + e for e in paths]
 
         return excludes
 
