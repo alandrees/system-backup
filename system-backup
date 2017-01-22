@@ -151,7 +151,6 @@ class SystemBackup:
                                                      cfg['host'],
                                                      remote_path,
                                                      local_path)
-
             if not cmd_return:
                 raise RuntimeError("rsync command returned non-zero")
 
