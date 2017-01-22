@@ -145,9 +145,10 @@ class SystemBackup:
 
             remote_path = path['path']
 
-            self._execute_rsync_command(path_cmd_line,
-                                        remote_path,
-                                        local_path)
+            cmd_return = self._execute_rsync_command(path_cmd_line,
+                                                     cfg['host'],
+                                                     remote_path,
+                                                     local_path)
 
     def _build_ssh_command(self, host_args):
         """
